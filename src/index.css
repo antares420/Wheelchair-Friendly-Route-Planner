@@ -1,0 +1,238 @@
+:root {
+  --primary-blue: #1e40af;
+  --success-green: #16a34a;
+  --warning-amber: #f59e0b;
+  --background-light: #f8fafc;
+  --text-dark: #1a202c;
+  --text-light: #f8fafc;
+  --border-color: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Header */
+.app-header {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.app-header p {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Demo Controls */
+.demo-controls {
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.demo-btn {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.demo-btn:hover {
+  background-color: #1c3899;
+}
+
+.demo-btn.secondary {
+    background-color: #5a67d8;
+}
+
+.demo-btn.secondary:hover {
+    background-color: #4c58b5;
+}
+
+/* Core Layout: Panel + Map */
+.core-layout {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Route Info Panel */
+.route-info-panel {
+  width: 30%;
+  min-width: 350px;
+  background-color: #fff;
+  padding: 1.5rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-color);
+}
+
+.route-info-panel h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+.placeholder-text {
+  color: #718096;
+  font-style: italic;
+}
+
+/* Accessibility Score */
+.accessibility-score {
+  background-color: var(--success-green);
+  color: var(--text-light);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.accessibility-score .score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.accessibility-score .rating {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Route Details */
+.route-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  background-color: var(--background-light);
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+
+.detail-item .label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.detail-item .value {
+  font-size: 1.1rem;
+  color: var(--primary-blue);
+}
+
+/* Directions */
+.directions-panel h3 {
+  border-bottom: 2px solid var(--primary-blue);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.direction-step {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.direction-step:last-child {
+  border-bottom: none;
+}
+
+.direction-step .instruction {
+  font-weight: 500;
+}
+
+.direction-step .guidance {
+  font-size: 0.9rem;
+  color: var(--success-green);
+  margin-top: 0.25rem;
+}
+
+/* Map Container */
+.map-container {
+  width: 70%;
+  height: 100%;
+  background-color: #e2e8f0;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom Map Markers */
+.accessibility-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  border: 2px solid white;
+}
+
+.marker-green {
+  background-color: var(--success-green);
+  color: white;
+}
+
+.marker-blue {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.marker-yellow {
+  background-color: var(--warning-amber);
+  color: white;
+}
