@@ -2,53 +2,42 @@
 // This file contains pre-configured data for the demo routes to ensure a fast and reliable demo experience.
 
 export const ROUTE_TYPE = {
-  AIRPORT_BHAKTAPUR: 'AIRPORT_BHAKTAPUR',
+  PASHUPATI_BOUDHANATH: 'PASHUPATI_BOUDHANATH',
   THAMEL_BOUDHANATH: 'THAMEL_BOUDHANATH',
 };
 
 export const mockRoutes = {
-  [ROUTE_TYPE.AIRPORT_BHAKTAPUR]: {
-    name: "Airport → Bhaktapur",
-    from: "Tribhuvan International Airport",
-    to: "Bhaktapur Durbar Square",
-    distance: "12.5 km",
-    duration: "45 min",
+  [ROUTE_TYPE.PASHUPATI_BOUDHANATH]: {
+    name: "Pashupatinath → Boudhanath",
+    from: "Pashupatinath Temple",
+    to: "Boudhanath Stupa",
+    distance: "2.1 km",
+    duration: "12 min",
     accessibility: {
-      score: 92,
+      score: 95,
       rating: "Excellent",
-      elevation: "Gentle slopes (<3% grade)",
+      elevation: "Mostly flat (<2% grade)",
       barriersAvoided: "0 stairs, 0 steep inclines",
-      features: "12 curb cuts, 3 ramps identified",
+      features: "5 curb cuts, 2 ramps identified",
     },
     directions: [
-      { instruction: "Head east from Airport Arrivals (200m)", guidance: "Paved, flat surface with designated walkway." },
-      { instruction: "Turn left onto Ring Road (2.5km)", guidance: "Wide sidewalk, wheelchair accessible path." },
-      { instruction: "Continue straight past Koteshwor (3km)", guidance: "Paved road, gentle incline, step-free." },
-      { instruction: "Caution: Uneven pavement for 150m.", guidance: "Monitor surface, proceed with care." },
-      { instruction: "Turn right towards Bhaktapur (4km)", guidance: "Smooth asphalt road, well-maintained." },
-      { instruction: "Follow signs for Durbar Square (2.5km)", guidance: "Accessible side paths available." },
-      { instruction: "Arrive at Bhaktapur Durbar Square", guidance: "Main entrance is step-free. Ramps available for key temples." },
+      { instruction: "Head north from Pashupatinath West Gate (400m)", guidance: "Paved, accessible pathway." },
+      { instruction: "Turn right onto Gaushala Road (1.2km)", guidance: "Wide sidewalk, wheelchair accessible path." },
+      { instruction: "Continue straight towards Boudha (500m)", guidance: "Gentle incline, step-free." },
+      { instruction: "Arrive at Boudhanath Stupa entrance", guidance: "Main entrance is fully accessible and step-free." },
     ],
     mapData: {
-      path: [ // Fallback polyline that looks more realistic
-        [27.6966, 85.3591], // Airport
-        [27.6986, 85.3540],
-        [27.6948, 85.3495],
-        [27.6925, 85.3522],
-        [27.6906, 85.3616],
-        [27.6904, 85.3728],
-        [27.6868, 85.3845],
-        [27.6849, 85.3942],
-        [27.6846, 85.4077],
-        [27.6778, 85.4205],
-        [27.6732, 85.4298], // Bhaktapur
+      path: [ 
+        [27.7108, 85.3485], // Pashupatinath
+        [27.7140, 85.3520],
+        [27.7175, 85.3560],
+        [27.7206, 85.3617], // Boudhanath
       ],
       markers: [
-        { pos: [27.6955, 85.3680], type: 'ramp', label: 'Ramp' },
-        { pos: [27.6880, 85.3900], type: 'curb_cut', label: 'Curb Cut' },
-        { pos: [27.6800, 85.4150], type: 'caution', label: 'Caution: Uneven Surface' },
-        { pos: [27.6740, 85.4280], type: 'accessible_entry', label: 'Step-free Entrance' },
-        { pos: [27.6735, 85.4290], type: 'ramp', label: 'Ramp' },
+        { pos: [27.7120, 85.3500], type: 'ramp', label: 'Ramp' },
+        { pos: [27.7160, 85.3540], type: 'curb_cut', label: 'Curb Cut' },
+        { pos: [27.7200, 85.3600], type: 'ramp', label: 'Ramp to Stupa' },
+        { pos: [27.7206, 85.3617], type: 'accessible_entry', label: 'Step-free Entrance' },
       ]
     }
   },

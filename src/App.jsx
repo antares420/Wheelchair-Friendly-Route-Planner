@@ -29,6 +29,7 @@ function App() {
           mapData: {
             ...mockData.mapData,
             path: path,
+            markers: [], // Clear mock markers when showing a live route
           },
         };
         setCurrentRoute(newRouteData);
@@ -58,9 +59,9 @@ function App() {
         <div className="demo-controls">
           <button 
             className="demo-btn" 
-            onClick={() => handleShowRoute(ROUTE_TYPE.AIRPORT_BHAKTAPUR)}
+            onClick={() => handleShowRoute(ROUTE_TYPE.PASHUPATI_BOUDHANATH)}
           >
-            Airport → Bhaktapur
+            Pashupatinath → Boudhanath
           </button>
           <button 
             className="demo-btn secondary"
