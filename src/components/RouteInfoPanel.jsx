@@ -1,7 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const RouteInfoPanel = ({ routeData }) => {
+const RouteInfoPanel = ({ routeData, loading }) => {
+  if (loading) {
+    return (
+      <div className="route-info-panel">
+        <h2>Route Details</h2>
+        <p className="placeholder-text">Fetching route...</p>
+      </div>
+    );
+  }
+
   if (!routeData) {
     return (
       <div className="route-info-panel">
@@ -73,6 +82,7 @@ RouteInfoPanel.propTypes = {
       guidance: PropTypes.string,
     })),
   }),
+  loading: PropTypes.bool.isRequired,
 };
 
 export default RouteInfoPanel;

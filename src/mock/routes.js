@@ -30,13 +30,18 @@ export const mockRoutes = {
       { instruction: "Arrive at Bhaktapur Durbar Square", guidance: "Main entrance is step-free. Ramps available for key temples." },
     ],
     mapData: {
-      path: [ // Simplified polyline for demo purposes
-        [27.6966, 85.3591],
-        [27.6950, 85.3650],
-        [27.6900, 85.3800],
-        [27.6850, 85.4000],
-        [27.6780, 85.4200],
-        [27.6732, 85.4298],
+      path: [ // Fallback polyline that looks more realistic
+        [27.6966, 85.3591], // Airport
+        [27.6986, 85.3540],
+        [27.6948, 85.3495],
+        [27.6925, 85.3522],
+        [27.6906, 85.3616],
+        [27.6904, 85.3728],
+        [27.6868, 85.3845],
+        [27.6849, 85.3942],
+        [27.6846, 85.4077],
+        [27.6778, 85.4205],
+        [27.6732, 85.4298], // Bhaktapur
       ],
       markers: [
         { pos: [27.6955, 85.3680], type: 'ramp', label: 'Ramp' },
